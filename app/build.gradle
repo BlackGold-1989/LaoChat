@@ -1,0 +1,164 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+group = 'com.github.rahuljanagouda'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.3'
+    defaultConfig {
+        applicationId "com.laodev.chatapp"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 3
+        versionName "1.1"
+        multiDexEnabled true
+        archivesBaseName = "LaoChat" + versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //Sinch
+        resValue 'string', "sinch_app_id", "1db3c2a1-9221-4730-81f6-56ef189fd30e"
+        resValue 'string', "sinch_app_secret", "gQ7qNVgxx0yDg3qKiRfiiw=="
+
+        //Maps & Places
+        resValue 'string', "maps_api_key", "AIzaSyCB7xTbA6NzO0V0JWtOGo0cFcrKP-9DTrY"
+        resValue 'string', "foursquare_client_id", "1MPGSZ0IOUA4HAYDUTARFRKVZZEIVVXLD0YENZLJEF5HAYHD"
+        resValue 'string', "foursquare_client_secret", "MRJHT4Y1IIVSVLCAMC3VOM4V4TJ5YAIVLSOM2NT5SUQFRZEO"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../keystore")
+            storePassword "123456"
+            keyAlias "key0"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+        exclude 'project.properties'
+        exclude 'META-INF/INDEX.LIST'
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    ext {
+        supportLibraryVersion = '28.0.0'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'androidx.browser:browser:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0'
+
+    implementation 'com.google.firebase:firebase-core:17.4.4'
+    implementation 'com.google.firebase:firebase-database:19.3.1'
+    implementation 'com.google.firebase:firebase-storage:19.1.1'
+    implementation 'com.google.firebase:firebase-auth:19.3.2'
+    implementation 'com.google.firebase:firebase-messaging:20.2.3'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+    implementation 'com.google.firebase:firebase-analytics:17.4.4'
+    implementation 'com.google.firebase:firebase-crashlytics:17.1.1'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.eyalbira.loadingdots:loading-dots:1.0.2'
+    implementation 'com.iceteck.silicompressorr:silicompressor:2.1'
+    implementation 'com.kbeanie:multipicker:1.6@aar'
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+    implementation 'com.vanniktech:emoji-google:0.5.1'
+    implementation 'com.mxn.soul:flowingdrawer-core:2.0.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.daasuu:animateHorizontalProgressBar:0.2.4'
+    implementation 'com.karumi:dexter:4.2.0'
+    implementation 'com.github.bumptech.glide:glide:3.9.0-SNAPSHOT'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'com.github.adrielcafe:AndroidAudioConverter:0.0.8'    
+    implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:1.6.0-SNAPSHOT'
+    implementation 'com.squareup.okhttp3:okhttp:3.7.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.7.0'
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation('com.google.cloud:google-cloud-translate:1.12.0') {
+        exclude group: 'org.apache.httpcomponents'
+        exclude group: 'org.json', module: 'json'
+        exclude group: 'com.google.auto.value', module: 'auto-value'
+    }
+    annotationProcessor 'com.google.cloud:google-cloud-translate:1.12.0'
+    implementation('com.googlecode.ez-vcard:ez-vcard:0.10.4') {
+        exclude group: 'org.freemarker'
+    }
+
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+    implementation 'com.github.sephiroth74:NumberSlidingPicker:1.0.3'
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
+    implementation 'com.mikhaellopez:circularimageview:4.2.0'
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    implementation 'com.facebook.stetho:stetho-js-rhino:1.5.1'
+    implementation 'com.facebook.stetho:stetho-okhttp:1.5.1'
+    implementation 'com.github.javiersantos:AppUpdater:2.7'
+    implementation 'com.facebook.android:facebook-login:[5,6)'
+
+    implementation(name: 'sinch-android-rtc-3.12.11', version: '3.12.11', ext: 'aar')
+    implementation ('org.jitsi.react:jitsi-meet-sdk:2.9.0') { transitive = true }
+}
+
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}

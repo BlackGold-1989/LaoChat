@@ -1,0 +1,32 @@
+// Top-level build file where Status can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.google.gms:google-services:4.3.3'
+        classpath 'io.realm:realm-gradle-plugin:5.4.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.4'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.2.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { name 'glide-snapshot'; url 'http://oss.sonatype.org/content/repositories/snapshots' }
+        maven { url "https://jitpack.io" }
+        maven {
+            url "https://maven.google.com"
+        }
+        maven { url "https://github.com/jitsi/jitsi-maven-repository/raw/master/releases" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

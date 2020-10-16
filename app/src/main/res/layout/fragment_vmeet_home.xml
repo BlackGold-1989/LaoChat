@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingTop="26dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="26dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imgUser"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_avatar"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="1.5dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Hi, "
+                android:textAppearance="@style/FontPath.Medium"
+                android:textColor="@android:color/black"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:fillViewport="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="0dp"
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    app:shapeAppearance="@style/ShapeAppearance.MyApp.MediumComponent">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:gravity="center"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/llNewMeeting"
+                                    android:layout_width="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_height="wrap_content">
+
+                                    <RelativeLayout
+                                        android:background="@drawable/bg_meeting"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp">
+
+                                        <ImageView
+                                            android:backgroundTint="@android:color/white"
+                                            android:layout_centerInParent="true"
+                                            android:background="@drawable/ic_add"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"/>
+
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:textSize="14sp"
+                                        android:textColor="@color/textColorPrimary"
+                                        android:text="@string/new_meeting"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:gravity="center"
+                                android:layout_width="0dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/llJoin"
+                                    android:layout_width="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_height="wrap_content">
+
+                                    <RelativeLayout
+                                        android:background="@drawable/bg_primary_5dp"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp">
+
+                                        <ImageView
+                                            android:backgroundTint="@android:color/white"
+                                            android:layout_centerInParent="true"
+                                            android:background="@drawable/ic_join"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"/>
+
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:textSize="14sp"
+                                        android:textColor="@color/textColorPrimary"
+                                        android:text="@string/join"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:gravity="center"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/llSchedule"
+                                    android:layout_width="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center">
+
+                                    <RelativeLayout
+                                        android:background="@drawable/bg_primary_5dp"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp">
+
+                                        <ImageView
+                                            android:backgroundTint="@android:color/white"
+                                            android:layout_centerInParent="true"
+                                            android:background="@drawable/ic_calendar"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"/>
+
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:textSize="14sp"
+                                        android:textColor="@color/textColorPrimary"
+                                        android:text="@string/schedule"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Today's meeting history"
+                            android:layout_marginTop="20dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textAppearance="@style/FontPath.SemiBold"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="16sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ProgressBar
+                                android:id="@+id/progressBar"
+                                android:visibility="gone"
+                                android:layout_centerInParent="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <LinearLayout
+                                android:id="@+id/llError"
+                                android:visibility="gone"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:layout_marginTop="70dp"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:background="@drawable/ic_no_data"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:id="@+id/txtError"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/no_history_found"
+                                    android:textSize="14sp"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/textColorSecondary" />
+
+                            </LinearLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvHistory"
+                                android:paddingBottom="50dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                                android:orientation="vertical"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:listitem="@layout/itemview_meeting_history" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>

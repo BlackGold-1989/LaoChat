@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "721378895374",
+    "firebase_url": "https://laochat-582be.firebaseio.com",
+    "project_id": "laochat-582be",
+    "storage_bucket": "laochat-582be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721378895374:android:53b3fa41d08c54fc213e5f",
+        "android_client_info": {
+          "package_name": "com.laodev.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721378895374-l4rsf97tcq10ru3kno5cnhrt5u6li3nj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.laodev.chatapp",
+            "certificate_hash": "925f926985bc0e5dcafd5b389fd4572c8400e13a"
+          }
+        },
+        {
+          "client_id": "721378895374-cclu3iumq1fqf9mo2i7kbggpor8jloq7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.laodev.chatapp",
+            "certificate_hash": "ffb68b7a4eac858117cc57e64eba3a27ab63062d"
+          }
+        },
+        {
+          "client_id": "721378895374-rbiv67jdqild5rjecfdot7out5k48jhk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.laodev.chatapp",
+            "certificate_hash": "25c80d16234e522f7a992414a7706b4e9363946f"
+          }
+        },
+        {
+          "client_id": "721378895374-n5eqc6qdf376nmbvifs0t6f2gv62djs8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANaRAEG-1Fe4qL4CxdOGLcbBe-X4YHsIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721378895374-n5eqc6qdf376nmbvifs0t6f2gv62djs8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

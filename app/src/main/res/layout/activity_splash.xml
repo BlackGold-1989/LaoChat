@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:layout_marginBottom="75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/llt_loading"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_logo_"
+        android:contentDescription="@string/logo" />
+
+    <LinearLayout
+        android:id="@+id/llt_loading"
+        android:layout_above="@+id/animate_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/layout_splash_loading_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/loading"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_20sdp" />
+
+        <TextView
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/point_zoom"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_20sdp" />
+    </LinearLayout>
+
+    <com.daasuu.ahp.AnimateHorizontalProgressBar
+        android:id="@+id/animate_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_5sdp"
+        android:layout_above="@+id/app_name"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:ahp_backgroundColor="#6BC7F9"
+        app:ahp_progressColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:layout_marginRight="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/app_name"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_30sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_75sdp"
+        android:layout_marginBottom="@dimen/_35sdp"
+        android:text="@string/always_secure"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_10sdp"
+        tools:ignore="RelativeOverlap" />
+</RelativeLayout>

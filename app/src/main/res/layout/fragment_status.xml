@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/myStatus_RLY"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_58sdp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp">
+
+            <FrameLayout
+                android:id="@+id/image_LAY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+
+
+                <RelativeLayout
+                    android:id="@+id/image_layout"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="8dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/fab_chat"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_avatar" />
+
+                    <com.laodev.chatapp.utils.CircularStatusView
+                        android:id="@+id/statusCircular"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_55sdp"
+                        android:layout_centerInParent="true"
+                        app:portion_color="@color/colorPrimary"
+                        app:portion_spacing="6dp"
+                        app:portion_width="3dp"
+                        app:portions_count="99" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/chat_badge"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@drawable/ic_add_circle_black_24dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:elevation="16dp"
+                    android:gravity="center"
+                    android:src="@drawable/ic_add"
+
+                    tools:text="1" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/user_details_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/image_LAY"
+                android:padding="8dp">
+
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="My Status"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_name"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Tap to add status update"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/statusBadge"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/shape_notification"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/storyTime"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/listPreferredItemHeightSmall"
+            android:layout_gravity="center"
+            android:text="Status"
+            android:textAllCaps="false"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/colorPrimary"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="New Status"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_14sdp" />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:visibility="gone" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.laodev.chatapp.views.MyRecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp" />
+
+                <include layout="@layout/empty_view" />
+
+            </LinearLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

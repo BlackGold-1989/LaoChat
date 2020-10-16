@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="colorPrimary">#650681</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#00e676</color>
+    <color name="colorGreen">#00e676</color>
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+    <color name="colorBgLight">#EEEEEE</color>
+    <color name="colorBg">#e0e0e0</color>
+    <color name="colorBgDrawer">#f5f5f5</color>
+    <color name="colorIcon">#FFFFFF</color>
+    <color name="transparent_black" tools:keep="@color/transparent_black">#7F000000</color>
+    <color name="bg_gray">#E0E0E0</color>
+
+    <color name="windowBackground">#f5f3f3</color>
+
+    <color name="textColor0">#000000</color>
+    <color name="textColor4">#5A5A5A</color>
+    <color name="textColor1">#727272</color>
+    <color name="textColor2">#a1a1a1</color>
+    <color name="textColor3">#b6b6b6</color>
+    <color name="textColorWhite">#FFFFFF</color>
+
+
+    <color name="blue">#FF33B5E5</color>
+    <color name="purple">#FFAA66CC</color>
+    <color name="green">#FF99CC00</color>
+    <color name="orange">#FFFFBB33</color>
+    <color name="red">#FFFF4444</color>
+    <color name="darkBlue">#FF0099CC</color>
+    <color name="darkPurple">#FF9933CC</color>
+    <color name="darkGreen">#FF669900</color>
+    <color name="darkOrange">#FFFF8800</color>
+    <color name="darkRed">#FFCC0000</color>
+    <color name="colorPinkRed">#FD6273</color>
+
+    <color name="ss_colorPrimary">#9E9E9E</color>
+    <color name="ss_colorPrimaryDark">#616161</color>
+    <color name="ss_colorAccent">#95ff00</color>
+
+    <color name="ss_progress_startColor">#ffffd300</color>
+    <color name="ss_progress_endColor">#ffffcb00</color>
+    <color name="ss_progress_centerColor">#ffffb600</color>
+
+    <color name="ss_secondaryProgress_startColor">#80ffd300</color>
+    <color name="ss_secondaryProgress_endColor">#a0ffcb00</color>
+    <color name="ss_secondaryProgress_centerColor">#80ffb600</color>
+
+    <color name="ss_background_startColor">#ff9d9e9d</color>
+    <color name="ss_background_endColor">#ff747674</color>
+    <color name="ss_background_centerColor">#ff5a5d5a</color>
+    <color name="recent_update_color">#E4E2E2</color>
+    <color name="border_red">#FFA977</color>
+
+    <color name="status_border">#FFA977</color>
+
+    <color name="highlight_color">#d2b2e5</color>
+
+    <color name="new_meeting">#FF9800</color>  <!--ff5722-->
+    <color name="divider">#2A2D34</color>
+    <color name="delete">#f75254</color>
+    <color name="error">#e57373</color>
+</resources>

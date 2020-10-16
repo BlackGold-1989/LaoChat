@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tool:context=".activities.ForwardActivity">
+
+    <LinearLayout
+        android:layout_marginBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/chat_bg_inner"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:title="@string/select_contact"
+                app:titleTextColor="@color/textColorWhite"
+                app:navigationIcon="@drawable/ic_back"
+                app:menu="@menu/menu_forward"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_select"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/llt_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"/>
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ryc_users"
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_forward_24dp"
+        android:backgroundTint="@color/darkPurple"
+        app:fabSize="normal" />
+
+</RelativeLayout>
