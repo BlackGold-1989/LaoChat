@@ -40,7 +40,7 @@
     <string name="document">Document</string>
     <string name="group_admin">Group Admin</string>
 
-    <string name="privacy_policy_url" translatable="false">http://privacy.daxiao-itdev.com/LaoChat/</string>
+    <string name="privacy_policy_url" translatable="false">https://privacy.laodev.info/Laochat.php</string>
     <string name="missed_call">Missed Call</string>
     <string name="other_calls">Other Calls</string>
     <string name="otp_incorrect">Something went wrong! The format of the phone number provided is incorrect</string>
